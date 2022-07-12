@@ -19,7 +19,11 @@ class Timer {
 
     tick = () => {
         const timeRemaining = parseFloat(this.durationInput.value);
+        if (timeRemaining > 0) {
         this.durationInput.value =  timeRemaining - 1;
+        } else {
+            this.pause()
+        }
     }
 }
 
